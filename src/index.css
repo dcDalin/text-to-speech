@@ -12,5 +12,6 @@
 }
 
 .player-bg {
-  background: var(--medium-dark-linear, linear-gradient(199deg, #484545 22.66%, #272525 69.79%));
+  background: rgb(72,69,69);
+  background: linear-gradient(199deg, rgba(72,69,69,1) 0%, rgba(39,37,37,1) 100%);
 }

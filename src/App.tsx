@@ -6,7 +6,8 @@ import BlogLayout from './layout/BlogLayout';
 function App() {
   return (
     <>
-      <BsChevronLeft />
+      <BsChevronLeft className="text-lg" />
+
       <BlogLayout>
         <h1 className="text-4xl font-bold font-open-sans">
           How the oldest multicellular form of life was found in lava
