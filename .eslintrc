@@ -29,6 +29,16 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "plugin": ["simple-import-sort"],
+    "rules": {
+      //if we want to group imports can use below.
+      "simple-import-sort/imports": [
+        "error",
+        {
+          "groups": [["^react"], ["^antd"], ["^@?\\w"], ["@/(.*)"], ["^[./]"]]
+        }
+      ]
+    }
   }
 }
