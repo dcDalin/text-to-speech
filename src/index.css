@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  background-image: url('/src/assets/grain-bg.png');
+  @apply bg-blackGrain text-eggShell p-4 md:p-10;
+}
+
+.text-shadow-sm {
+  text-shadow: 0px 0px 20px 0px #4062DD;
+}
+
+.player-bg {
+  background: var(--medium-dark-linear, linear-gradient(199deg, #484545 22.66%, #272525 69.79%));
+}
