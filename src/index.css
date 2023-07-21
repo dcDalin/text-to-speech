@@ -15,3 +15,15 @@
   background: rgb(72,69,69);
   background: linear-gradient(199deg, rgba(72,69,69,1) 0%, rgba(39,37,37,1) 100%);
 }
+
+.highlight-spoken {
+  color: black !important;
+  background-color: #ff6f00 !important;
+  border-radius: 5px;
+}
+
+.highlight-sentence {
+  color: #000000 !important;
+  background-color: #ffe082 !important;
+  border-radius: 5px;
+}
