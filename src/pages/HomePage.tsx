@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useNavigate } from 'react-router-dom';
 
 import BlogCard from '../components/Cards/BlogCard';
@@ -22,7 +23,6 @@ export default function HomePage() {
           data.map(
             ({
               author,
-              blog,
               datePosted,
               imageUrl: {
                 fields: {
@@ -37,8 +37,8 @@ export default function HomePage() {
                   imageUrl={url}
                   title={title}
                   author={author}
-                  datePublished={''}
-                  readTime={'2 minutes'}
+                  datePublished={datePosted}
+                  readTime={'2 minutes read'}
                   handleNavigate={() => handleNavigate(slug)}
                 />
               );

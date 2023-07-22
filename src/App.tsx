@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import BlogPage from './pages/BlogPage';
 import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 
@@ -13,8 +14,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'blog',
-        element: <h1>Blog page</h1>,
+        path: '/:slug',
+        element: <BlogPage />,
       },
     ],
   },

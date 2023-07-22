@@ -16,6 +16,10 @@
   background: linear-gradient(199deg, rgba(72,69,69,1) 0%, rgba(39,37,37,1) 100%);
 }
 
+.thin-label {
+  @apply text-xs font-semibold text-gray font-source-sans
+}
+
 .highlight-spoken {
   color: black !important;
   background-color: #ff6f00 !important;

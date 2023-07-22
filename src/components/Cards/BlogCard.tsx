@@ -1,10 +1,11 @@
+import DateLabel from '../Labels/DateLabel';
 import ThinLabel from '../Labels/ThinLabel';
 
 interface IBlogCardProps {
   imageUrl: string;
   title: string;
   author: string;
-  datePublished: string;
+  datePublished: Date;
   readTime: string;
   handleNavigate: () => void;
 }
@@ -20,8 +21,8 @@ export default function BlogCard({ imageUrl, title, author, datePublished, readT
             <div className="flex items-center justify-between">
               <ThinLabel text={author} />
               <div className="flex items-center space-x-2">
+                <DateLabel dateString={datePublished} />
                 <ThinLabel text={readTime} />
-                <ThinLabel text={datePublished} />
               </div>
             </div>
           </div>
