@@ -18,7 +18,7 @@ export default function HomePage() {
   return (
     <>
       <Seo title="Blogs" />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16  p-4 md:p-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16  p-4 md:p-10">
         {data && data.length ? (
           data.map(
             ({

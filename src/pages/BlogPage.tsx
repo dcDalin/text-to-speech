@@ -17,8 +17,6 @@ export default function BlogPage() {
   if (loading) return <FullPageLoader />;
   if (error) return <p>{error}</p>;
 
-  console.log('Data is ******: ', data);
-
   const {
     title,
     author,
@@ -48,7 +46,10 @@ export default function BlogPage() {
           </section>
           <img className="h-56 md:h-64 w-full object-cover" src={url} alt={`${title} image`} />
 
-          <Blog blog={blog} />
+          <div>
+            <div className="float-left h-20 w-10 flex items-center">he</div>
+            <Blog blog={blog} />
+          </div>
           {/* 
         <FloatingControls
           isPlay={statusHL == 'play' || statusHL == 'calibration'}
