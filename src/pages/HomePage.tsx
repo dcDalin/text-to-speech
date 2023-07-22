@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import BlogCard from '../components/Cards/BlogCard';
 import FullPageLoader from '../components/Loaders/FullPageLoader';
 import Seo from '../components/Seo';
+import { useSpeech } from '../context/SpeechContext';
 import useBlogs from '../hooks/useBlogs';
 
 export default function HomePage() {
@@ -12,6 +14,12 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   const handleNavigate = (slug: string) => navigate(slug);
+
+  const { controlHL } = useSpeech();
+
+  useEffect(() => {
+    controlHL.stop();
+  }, [controlHL]);
 
   if (loading) return <FullPageLoader />;
   if (error) return <p>{error}</p>;
@@ -34,6 +42,7 @@ export default function HomePage() {
             }: any) => {
               return (
                 <BlogCard
+                  key={slug}
                   imageUrl={url}
                   title={title}
                   author={author}

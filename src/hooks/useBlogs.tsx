@@ -21,8 +21,6 @@ export default function useBlogs() {
           return item.fields;
         });
 
-        console.log('Sanitize is: ', sanitizeEntries);
-
         setData(sanitizeEntries);
         setLoading(false);
       } catch (error) {

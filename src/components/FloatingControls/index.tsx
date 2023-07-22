@@ -1,30 +1,30 @@
-// interface IFloatingControlsProps {
-//   isPlay: boolean;
-//   play: () => void;
-//   pause: () => void;
-//   stop: () => void;
-// }
+import CircularProgress from '../CircularProgress';
 
-// export default function FloatingControls({ isPlay, play, pause, stop }: IFloatingControlsProps) {
-//   return (
-//     <div>
-//       <button
-//         onClick={() => {
-//           if (isPlay) {
-//             pause();
-//           } else {
-//             play();
-//           }
-//         }}
-//       >
-//         {isPlay ? 'pause' : 'play'}
-//       </button>
+interface IFloatingControlsProps {
+  isPlay: boolean;
+  play: () => void;
+  pause: () => void;
+  stop: () => void;
+}
 
-//       {isPlay && <button onClick={stop}>stop</button>}
-//     </div>
-//   );
-// }
-
-export default function FloatingControls() {
-  return <div className="w-full h-full rounded-full player-bg flex items-center justify-between shadow-lg">hello</div>;
+export default function FloatingControls({ isPlay, play, pause, stop }: IFloatingControlsProps) {
+  return (
+    <div className="w-full h-full rounded-full player-bg flex items-center justify-between shadow-lg">
+      <div className="flex items-center space-x-4">
+        <div className="h-14 w-14">
+          <CircularProgress
+            isButton={true}
+            isPlay={isPlay}
+            handleClick={() => {
+              if (isPlay) {
+                pause();
+              } else {
+                play();
+              }
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
 }

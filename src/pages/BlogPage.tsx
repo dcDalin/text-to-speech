@@ -2,15 +2,18 @@ import { useParams } from 'react-router-dom';
 
 import Blog from '../components/Blog';
 import PreviousChevron from '../components/Buttons/PreviousChevron';
+import CircularProgress from '../components/CircularProgress';
 import FloatingControls from '../components/FloatingControls';
 import DateLabel from '../components/Labels/DateLabel';
 import FullPageLoader from '../components/Loaders/FullPageLoader';
 import Seo from '../components/Seo';
+import { useSpeech } from '../context/SpeechContext';
 import useBlog from '../hooks/useBlog';
 import BlogLayout from '../layout/BlogLayout';
 
 export default function BlogPage() {
   const { slug } = useParams();
+  const { controlHL, textEl, statusHL } = useSpeech();
 
   const { loading, data, error } = useBlog(slug);
 
@@ -47,26 +50,26 @@ export default function BlogPage() {
           <img className="h-56 md:h-64 w-full object-cover" src={url} alt={`${title} image`} />
 
           <div>
-            <div className="float-left h-20 w-10 flex items-center">he</div>
+            <div className="float-left h-12 w-12 pt-8 pr-2 flex items-center">
+              <CircularProgress />
+            </div>
             <Blog blog={blog} />
           </div>
-          {/* 
-        <FloatingControls
-          isPlay={statusHL == 'play' || statusHL == 'calibration'}
-          play={() => {
-            if (statusHL == 'pause') {
-              controlHL.resume();
-            } else {
-              controlHL.play(textEl.current, localStorage.getItem('voice_for_' + 'en - US'));
-            }
-          }}
-          pause={controlHL.pause}
-          stop={controlHL.stop}
-        />  */}
         </BlogLayout>
         <div className="fixed bottom-16 left-0 w-full h-14 md:h-20">
           <div className="h-full w-full md:w-[572px] mx-auto px-4 md:px-8">
-            <FloatingControls />
+            <FloatingControls
+              isPlay={statusHL == 'play' || statusHL == 'calibration'}
+              play={() => {
+                if (statusHL == 'pause') {
+                  controlHL.resume();
+                } else {
+                  controlHL.play(textEl.current, localStorage.getItem('voice_for_' + 'en - US'));
+                }
+              }}
+              pause={controlHL.pause}
+              stop={controlHL.stop}
+            />
           </div>
         </div>
       </div>
