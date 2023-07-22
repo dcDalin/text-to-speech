@@ -8,6 +8,7 @@ export default {
         eggShell: '#FDFBF7',
         logoBlue: '#5978E8',
         gray: '#707070',
+        thinDarkGray: '#4D4D4D',
       },
       fontFamily: {
         'open-sans': ['Open Sans', 'sans-serif'],
