@@ -16,8 +16,6 @@ export default function CircularProgress({ handleClick, isButton = false, isPlay
 
   const percentage = spokenHL.precentageSentence;
 
-  console.log('Percentage: ', percentage);
-
   return (
     <button onClick={handleClick}>
       <CircularProgressbarWithChildren
