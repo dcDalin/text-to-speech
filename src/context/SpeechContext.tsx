@@ -15,6 +15,7 @@ type Speech = {
   spokenHL: any;
   textEl: any;
   calibrating: boolean;
+  seekForward: () => void;
 };
 
 const SpeechContext = createContext<Speech | null>(null);
