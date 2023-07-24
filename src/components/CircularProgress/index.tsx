@@ -25,7 +25,7 @@ export default function CircularProgress({ handleClick, isButton = false, isPlay
           rotation: 0,
 
           // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-          strokeLinecap: 'butt',
+          strokeLinecap: 'round',
 
           // How long animation takes to go from one percentage to another, in seconds
           pathTransitionDuration: 0.5,
@@ -34,9 +34,8 @@ export default function CircularProgress({ handleClick, isButton = false, isPlay
           // pathTransition: 'none',
 
           // Colors
-          pathColor: `rgba(62, 152, 199, ${100})`,
-          textColor: '#f88',
-          trailColor: '#d6d6d6',
+          pathColor: `#5978E8`,
+          trailColor: 'rgba(151, 151, 151, 0.1)',
           backgroundColor: '#3e98c7',
         })}
       >

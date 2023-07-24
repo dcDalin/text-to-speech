@@ -14,6 +14,11 @@ export default {
         'open-sans': ['Open Sans', 'sans-serif'],
         'source-sans': ['Source Sans 3', 'sans-serif'],
       },
+      rotate: {
+        315: '315deg',
+        270: '270deg',
+        225: '225deg',
+      },
     },
   },
   plugins: [],

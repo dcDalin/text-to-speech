@@ -16,7 +16,7 @@ export default function FloatingControls({ isPlay, play, pause, stop }: IFloatin
       <PitchKnob />
 
       <SeekTime seek="backward" />
-      <div className="h-14 w-14">
+      <div className="h-10 md:h-14 w-10 md:w-14">
         <CircularProgress
           isButton={true}
           isPlay={isPlay}

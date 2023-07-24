@@ -20,13 +20,9 @@
 }
 
 .highlight-spoken {
-  color: black !important;
-  background-color: #ff6f00 !important;
-  border-radius: 5px;
+  @apply text-logoBlue bg-eggShell
 }
 
 .highlight-sentence {
-  color: #000000 !important;
-  background-color: #ffe082 !important;
-  border-radius: 5px;
+  @apply text-eggShell bg-logoBlue/30 border-b-2 border-logoBlue
 }
